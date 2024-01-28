@@ -1,0 +1,37 @@
+#tit
+{
+    font-weight: bold;
+    font-style: italic;
+    color: red;
+    background-color: aliceblue;
+
+}
+
+#background
+{
+height: 10000000000px;
+}
+
+img
+{
+    border-radius: 25px;
+    border-color: black;
+    border-width: 5px;
+}
+
+#f
+{
+    border-radius: 10px;
+    background-color: lightgrey;
+    font-weight: bold;
+}
+
+#c
+{
+    border-radius: 10px;
+    background-color: lightgrey;
+    font-weight: bold;
+}
+
+
+

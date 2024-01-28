@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO2 Emissions Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <center>
+    <div class="container">
+        <h1 id="tit">CO2 Emissions Calculator By Food</h1>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE8ijucoKIFSzuLbMA1GaGY-iVzdTJwXbIug&usqp=CAU">
+        <div id="foodEntries">
+            <!-- Food entries will be dynamically added here -->
+        </div>
+        <br>
+        <button id="f"onclick="addFoodEntry()">Add Food Entry</button>
+        <button id="c"onclick="calculate()">Calculate Total CO2</button>
+        <button onclick="rep()" id="c">Food Types</button>
+        <div id="result"></div>
+
+        <div id="foodList"></div>
+    </div>
+    </center>
+    <script src="main.js">
+        
+    </script>
+   
+   <script>
+    // JavaScript code to change background image
+   document.body.style.backgroundImage = "url('data:image/jpeg;base64,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')";
+</script> 
+
+<style>
+    /* CSS to style the background image */
+    #background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        z-index: -1; /* Ensures the background is behind other content */
+    }
+
+    
+</style>
+</body>
+</html>
+
